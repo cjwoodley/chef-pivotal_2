@@ -1,0 +1,22 @@
+---
+driver:
+  name: vagrant    
+  customize:
+    cpus: 2
+    memory: 4096
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: centos-6.5
+
+suites:
+  - name: PHD_A1
+    driver: 
+      vm_hostname: PHDA1.local.com
+      network: 
+      - ["private_network", {ip: "192.168.56.110"}]
+    run_list:
+      - recipe[PCC::default]
+    attributes:

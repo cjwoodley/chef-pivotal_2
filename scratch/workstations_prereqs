@@ -1,0 +1,11 @@
+nc \
+postgresql-devel \
+krb5-libs \
+krb5-workstation \
+openldap \
+openldap-clients \
+pam_krb5 \
+sssd \
+authconfig \
+openssh-clients \
+python-ldap 

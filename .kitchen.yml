@@ -1,0 +1,21 @@
+---
+driver:
+  name: vagrant
+    customize:
+    cpus: 2
+    memory: 4096
+
+
+provisioner:
+  name: chef_zero
+  require_chef_omnibus: true
+
+platforms:
+  - name: centos-6.4
+
+suites:
+  - name: PCC_Admin
+    run_list:
+      - recipe[PCC::default]
+    attributes:
+
